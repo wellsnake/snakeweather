@@ -1,0 +1,5 @@
+cron:
+- description: faweibo1
+  url: /task
+  schedule: every 8 hours
+  timezone: Asia/Shanghai
