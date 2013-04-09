@@ -1,5 +1,15 @@
 cron:
 - description: faweibo1
   url: /task
-  schedule: every 8 hours
+  schedule: every day 09:00
+  timezone: Asia/Shanghai
+
+- description: faweibo2
+  url: /task
+  schedule: every day 11:00
+  timezone: Asia/Shanghai
+
+- description: faweibo2
+  url: /task
+  schedule: every day 17:00
   timezone: Asia/Shanghai
