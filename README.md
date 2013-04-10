@@ -4,7 +4,7 @@ Snake的天气小助手
 每天定时将中国天气网的天气信息同步发送到绑定的微博上
 用法
 -----------
-1.  访问 [Snake的天气小助手](http://weather.wellsnake.com,"Snake的天气小助手")
+1.  访问 [Snake的天气小助手](http://weather.wellsnake.com)
 2.  点击登陆
 3.  系统会自动跳转到微博授权页面，点击“授权”即可
 
