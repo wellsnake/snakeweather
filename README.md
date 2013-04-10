@@ -14,8 +14,6 @@ Snake的天气小助手
 2. 修改config.py文件内的“APP_KEY” “APP_SECRET” “CALLBACK_URL”相应的值
 3. 将代码部署到Google appengine上就可以啦>_<
 
----
-
 Todo List
 -----------
 1. 将程序部署到Goole appengine上
