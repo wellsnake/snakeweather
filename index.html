@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake的天气小助手</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        .container-narrow {
+            margin: 0 auto;
+            max-width: 700px;
+
+        }
+        .jumbotron {
+            margin: 60px 0;
+            text-align: center;
+        }
+        .jumbotron h1 {
+            font-size: 72px;
+            line-height: 1;
+        }
+        .lead {
+            font-size: 21px;
+            font-weight: 200;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+        .jumbotron .btn {
+            font-size: 21px;
+            padding: 14px 24px;
+        }
+    </style>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<div class="container-narrow">
+    <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+            <li class="active">
+                <a href="http://weather.wellsnake.com">Home</a>
+            </li>
+            <li>
+                <a href="http://weibo.com/wellsnake">微博</a>
+            </li>
+            <li>
+                <a href="http://github.com/wellsnake/snakeweather">源代码</a>
+            </li>
+        </ul>
+        <h3 class="muted">Snake的天气小助手</h3>
+    </div>
+    <hr>
+    <div class="jumbotron">
+        <h1>每天为您勤劳预报天气的小助手</h1>
+        <p class="lead">Snake的天气小助手是一个部署在Google App Engine上的一个App。每天会将您定制的城市的天气信息同步发送到您绑定的微博上。现在就登录享受免费的天气预报吧！</p>
+        <a class="btn btn-large btn-success" href="{{ url }}">使用微博登陆</a>
+    </div>
+    <hr>
+    <div class="row-fluid marketing">
+        <div class="span6">
+            <h4>可自定义</h4>
+            <p>可以自定义城市，自定义输出到微博的内容，可自定义需要@的用户。</p>
+            <h4>更多的社交网站</h4>
+            <p>可以将内容同步到微博、腾讯微博、人人网、twitter、facebook。</p>
+        </div>
+        <div class="span6">
+            <h4>聪明的小助手</h4>
+            <p>根据天气预报的内容的输出不同的表亲。晴天显示笑脸>_<，阴天显示哭脸π_π。</p>
+            <h4>完全免费开源</h4>
+            <p>太cool了！你也可以马上搭建自己的天气小助手！</p>
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        <div class="span3">
+            作者:<a href="http://weibo.com/wellsnake">@wellsnake </a>
+        </div>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

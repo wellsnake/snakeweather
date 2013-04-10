@@ -2,20 +2,27 @@
 # coding: utf-8
 __author__ = 'Snake'
 
-import webapp2
+
+from google.appengine.ext import webapp
+import os
 from weibo import APIClient
 from db import users
 import config as c
+from google.appengine.ext.webapp import template
 
 
-class MainHandler(webapp2.RequestHandler):
+class MainHandler(webapp.RequestHandler):
     def get(self):
         client = APIClient(app_key=c.APP_KEY, app_secret=c.APP_SECRET,
                            redirect_uri=c.CALLBACK_URL)
         url = client.get_authorize_url()    # redirect the user to `url'
-        self.response.write("<a href='%s'>登录</a>" % url)
+        template_values ={
+            'url':url,
+        }
+        path = os.path.join(os.path.dirname(__file__), 'index.html')
+        self.response.out.write(template.render(path, template_values))
 
-class MainHandler1(webapp2.RequestHandler):
+class MainHandler1(webapp.RequestHandler):
     def get(self):
         client = APIClient(app_key=c.APP_KEY, app_secret=c.APP_SECRET,
                            redirect_uri=c.CALLBACK_URL)
@@ -33,10 +40,10 @@ class MainHandler1(webapp2.RequestHandler):
         self.response.write("登录成功")
 
 
-app = webapp2.WSGIApplication([
+app = webapp.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
 
-app1 = webapp2.WSGIApplication([
+app1 = webapp.WSGIApplication([
                                   ('/callback', MainHandler1)
                               ], debug=True)

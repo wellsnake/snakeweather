@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 __author__ = 'Snake'
-import webapp2
+from google.appengine.ext import webapp
 from db import users
 from weibo import APIClient
 import config as c
 import urllib2
 import json
 
-class MainHandler(webapp2.RequestHandler):
+class MainHandler(webapp.RequestHandler):
     def get(self):
         content = urllib2.urlopen(c.weather_url, timeout=20).read()
         weather = json.loads(content)
@@ -29,6 +29,6 @@ class MainHandler(webapp2.RequestHandler):
             client.statuses.update.post(status=desc)
 
 
-app = webapp2.WSGIApplication([
+app = webapp.WSGIApplication([
                                   ('/task', MainHandler)
                               ], debug=True)
