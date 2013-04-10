@@ -12,7 +12,7 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         content = urllib2.urlopen(c.weather_url, timeout=20).read()
         weather = json.loads(content)
-        desc = u"大家好，今天是%s %s，温度：%s，天气：%s ，%s 明天温度:%s 天气:%s 。 - 我是每天为你勤劳预报天气的#Snake的天气小助手# http://http://weather.wellsnake.com/" % (
+        desc = u"大家好，今天是%s %s，温度：%s，天气：%s ，%s 明天温度:%s 天气:%s 。 - 我是每天为你勤劳预报天气的#Snake的天气小助手# http://weather.wellsnake.com/" % (
             weather['weatherinfo']["date_y"],
             weather['weatherinfo']["week"],
             weather['weatherinfo']["temp1"],
